@@ -14,7 +14,11 @@ export type Project = {
   title: string;
   year: string;
   category: string;
+  role: string;
   client: string;
+  clientLabel?: string;
+  demoUrl?: string;
+  githubUrl?: string;
   location: string;
   image: string;
   summary: string;
@@ -31,39 +35,47 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "obsidian-house",
+    slug: "kashflow",
     displayIndex: "01",
-    title: "Monolith Archive",
-    year: "2025",
-    category: "Architecture / Archive",
-    client: "Obscura Labs",
-    location: "Bandung",
-    image: "/projects/monolith-archive.svg",
-    summary: "A digital repository exploring structurally minimal architectural forms.",
-    description: "A document-led archive framework focused on form, negative space, and disciplined metadata.",
+    title: "Kashflow",
+    year: "2026",
+    category: "Web App",
+    role: "Fullstack Developer",
+    client: "Competition",
+    clientLabel: "Context",
+    demoUrl: "https://kashflow.my.id",
+    githubUrl: "https://github.com/Pipip-zen/kasflow",
+    location: "Indonesia",
+    image: "/projects/kashflow-image.png",
+    summary: "A modern cash-collection web app for groups, with automated billing, live payment tracking, and a cleaner admin flow.",
+    description: "Collective cash management application. Send automatic invoices via email. Monitor cash inflows in real time.",
     featured: true,
-    services: ["Creative direction", "Information architecture", "Frontend engineering"],
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    services: ["Web app", "AI integration", "UI UX design"],
+    stack: ["React JS", "Tailwind CSS", "Supabase", "AI integration"],
     metrics: [
-      { label: "Sections", value: "14" },
-      { label: "Editorial modules", value: "09" },
-      { label: "Launch window", value: "3 weeks" }
+      { label: "Invoice flow", value: "Auto email" },
+      { label: "Cash tracking", value: "Real time" },
+      { label: "Build year", value: "2026" }
     ],
-    challenge: "Translate dense architectural material into a restrained digital experience without falling into gallery-site cliches.",
-    solution: "Used asymmetrical content framing, hairline structure, and text-first modules to make process notes feel as important as the final photography.",
-    outcome: "The launch created a clearer hierarchy between archive, projects, and commissions while preserving the studio's severe visual language.",
+    challenge: "Make collective cash collection easier to manage while keeping billing, payment tracking, and reminders simple for organizers and members.",
+    solution: "Built a web app that centralizes recurring cash billing, automates invoice emails, and surfaces live payment status in one clear dashboard.",
+    outcome: "The project turned a manual group-finance workflow into a faster and more transparent digital system suitable for competition presentation.",
     process: [
       {
-        title: "Index as threshold",
-        description: "Built the homepage like an entrance plaque: title first, then coordinates, then work."
+        title: "Flow mapping",
+        description: "Mapped the full billing cycle from invoice creation to payment confirmation so every user action had a clear next step."
       },
       {
-        title: "Project rhythm",
-        description: "Alternated dense metadata blocks with large fields of empty space to preserve editorial tension."
+        title: "System dashboard",
+        description: "Designed a monitoring view that keeps incoming cash, unpaid members, and invoice status readable at a glance."
       },
       {
-        title: "Detail architecture",
-        description: "Turned project pages into modular case studies with challenge, system, material, and outcome frames."
+        title: "Integrated payment (experimental)",
+        description: "Explored an early payment integration flow to reduce manual confirmation steps and make future transactions more seamless."
+      },
+      {
+        title: "Automation layer",
+        description: "Connected recurring billing logic with email delivery so organizers could notify members without manual follow-up."
       }
     ]
   },
@@ -73,6 +85,7 @@ export const projects: Project[] = [
     title: "Void Framework",
     year: "2024",
     category: "System Design",
+    role: "Frontend Engineer",
     client: "Axis / 09",
     location: "Singapore",
     image: "/projects/void-framework.svg",
@@ -110,6 +123,7 @@ export const projects: Project[] = [
     title: "Kinetic Type",
     year: "2024",
     category: "Typography / Motion",
+    role: "UI Engineer",
     client: "Concrete Signal",
     location: "Tokyo",
     image: "/projects/kinetic-type.svg",
@@ -147,6 +161,7 @@ export const projects: Project[] = [
     title: "Concrete Signal",
     year: "2023",
     category: "Environment / System",
+    role: "Frontend Developer",
     client: "Void Terminal",
     location: "Seoul",
     image: "/projects/concrete-signal.svg",
