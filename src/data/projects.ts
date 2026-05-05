@@ -121,8 +121,49 @@ export const projects: Project[] = [
     ]
   },
   {
-    slug: "concrete-signal",
+    slug: "invoice-generator",
     displayIndex: "03",
+    title: "Invoice Generator",
+    year: "2025",
+    category: "Web App",
+    role: "Fullstack Developer",
+    client: "Personal project",
+    clientLabel: "Context",
+    demoUrl: "https://invoice-generator-khaki-nu.vercel.app/",
+    githubUrl: "https://github.com/Pipip-zen/invoice-generator",
+    location: "Indonesia",
+    image: "/projects/invoice-images.png",
+    summary: "A streamlined invoice dashboard for creating bills, monitoring payments, and understanding revenue performance faster.",
+    description: "Manage invoices, track payments, and visualize your revenue — all in one clean dashboard.",
+    featured: false,
+    services: ["Dashboard UI", "Data visualization", "Fullstack development"],
+    stack: ["React + Vite", "Tailwind CSS", "Supabase", "Recharts", "React Hook Form", "Vercel"],
+    metrics: [
+      { label: "Invoices", value: "Managed" },
+      { label: "Payments", value: "Tracked" },
+      { label: "Revenue", value: "Visualized" }
+    ],
+    challenge: "Design an invoice workflow that keeps billing, payment status, and revenue tracking simple without turning the dashboard into a cluttered admin tool.",
+    solution: "Built a clean dashboard structure with Supabase-backed data, form handling for invoice management, and charts that make revenue trends easier to read.",
+    outcome: "The project turned invoice administration into a more organized, visual, and accessible workflow for day-to-day financial tracking.",
+    process: [
+      {
+        title: "Dashboard structure",
+        description: "Organized the interface around invoices, payment tracking, and revenue overview so users could find the main actions quickly."
+      },
+      {
+        title: "Form workflow",
+        description: "Used structured form handling to make invoice creation and updates more reliable and easier to maintain."
+      },
+      {
+        title: "Revenue visibility",
+        description: "Added chart-based summaries to help users read payment activity and revenue performance at a glance."
+      }
+    ]
+  },
+  {
+    slug: "concrete-signal",
+    displayIndex: "04",
     title: "Kinetic Type",
     year: "2024",
     category: "Typography / Motion",
@@ -155,44 +196,6 @@ export const projects: Project[] = [
       {
         title: "Filter economy",
         description: "Designed filters to feel like notation rather than app chrome."
-      }
-    ]
-  },
-  {
-    slug: "void-terminal",
-    displayIndex: "04",
-    title: "Concrete Signal",
-    year: "2023",
-    category: "Environment / System",
-    role: "Frontend Developer",
-    client: "Void Terminal",
-    location: "Seoul",
-    image: "/projects/concrete-signal.svg",
-    summary: "A launch environment staged as a severe digital threshold with one primary action path.",
-    description: "A sparse microsite that uses silence, timing, and architectural framing to focus attention on the core event.",
-    featured: false,
-    services: ["Microsite concept", "Motion direction", "Frontend build"],
-    stack: ["Next.js", "Framer Motion", "Tailwind CSS"],
-    metrics: [
-      { label: "Build time", value: "10 days" },
-      { label: "Event cities", value: "03" },
-      { label: "Primary CTA", value: "Single path" }
-    ],
-    challenge: "Build anticipation with almost no visual ornament and only one meaningful action path.",
-    solution: "Relied on typography scale, sequencing, and delayed content reveals rather than media-heavy spectacle.",
-    outcome: "The site concentrated attention on attendance conversion while staying aligned with the installation's raw aesthetic.",
-    process: [
-      {
-        title: "Threshold pacing",
-        description: "Structured the sequence like an approach corridor: wait, reveal, then instruction."
-      },
-      {
-        title: "Single-action clarity",
-        description: "Every module pointed back to attendance information or event context."
-      },
-      {
-        title: "Monochrome discipline",
-        description: "Avoided visual effects that would cheapen the event's physical atmosphere."
       }
     ]
   }

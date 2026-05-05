@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function WorksPage() {
   return (
     <PageShell index="02" label="Works">
-      <section className="space-y-8 border-b border-outline-variant pb-10 lg:pb-16">
+      <section className="space-y-6 border-b border-outline-variant pb-5 lg:pb-8">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,0.6fr)] lg:items-start">
           <div>
             <p className="font-serif text-[3.6rem] font-normal leading-[0.94] tracking-editorial text-on-surface sm:text-[5rem] lg:text-[6rem]">
