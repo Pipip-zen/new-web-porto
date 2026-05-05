@@ -1,0 +1,7 @@
+# Local agent and Codex setup
+.agents/
+.codex/
+AGENTS.md
+DESIGN.md
+VIBE_FLOW.md
+.env
