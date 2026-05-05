@@ -19,13 +19,13 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://monochrome-experimentalist.dev"),
   title: {
-    default: "Mika Vale — Monochrome Experimentalist",
-    template: "%s — Mika Vale"
+    default: "Portofolio Website — Rafif NUha",
+    template: "%s — Rafif Nuha"
   },
-  description: "A monochrome, editorial portfolio for Mika Vale — frontend developer and spatial web designer.",
+  description: "A monochrome, editorial portfolio for Rafif Nuha — frontend developer and spatial web designer.",
   keywords: ["portfolio", "frontend developer", "editorial design", "next.js", "monochrome"],
   openGraph: {
-    title: "Mika Vale — Monochrome Experimentalist",
+    title: "Rafif Nuha — Monochrome Experimentalist",
     description: "Monochrome editorial portfolio built with Next.js.",
     type: "website"
   }

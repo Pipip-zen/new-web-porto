@@ -8,7 +8,7 @@ export type NavigationItem = {
 export const siteProfile = {
   name: "Rafif Nuha",
   role: "Designer / Developer",
-  location: "Jakarta, Indonesia",
+  location: "Surabaya, Indonesia",
   availability: "Open to Project",
   email: "rafif.nuha@gmail.com"
 };
