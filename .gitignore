@@ -4,4 +4,8 @@
 AGENTS.md
 DESIGN.md
 VIBE_FLOW.md
+
+# Next.js
+node_modules/
+.next/
 .env
