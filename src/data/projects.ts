@@ -160,44 +160,6 @@ export const projects: Project[] = [
         description: "Added chart-based summaries to help users read payment activity and revenue performance at a glance."
       }
     ]
-  },
-  {
-    slug: "concrete-signal",
-    displayIndex: "04",
-    title: "Kinetic Type",
-    year: "2024",
-    category: "Typography / Motion",
-    role: "UI Engineer",
-    client: "Concrete Signal",
-    location: "Tokyo",
-    image: "/projects/kinetic-type.svg",
-    summary: "A generative typographic environment focused on structural letterforms and motion cadence.",
-    description: "A motion-driven poster and archive system where typography behaves like a mechanism rather than static text.",
-    featured: false,
-    services: ["Archive mapping", "Prototype", "UI implementation"],
-    stack: ["Next.js", "TypeScript", "Content modeling"],
-    metrics: [
-      { label: "Issues mapped", value: "32" },
-      { label: "Archive views", value: "05" },
-      { label: "Filter states", value: "18" }
-    ],
-    challenge: "Make a dense archive readable without diluting the publication's hard-edged presence.",
-    solution: "Created a grid of numbered entries, strict labeling, and lightweight filter states with clear metadata priorities.",
-    outcome: "Editors can publish new issues quickly while readers move through the archive using architectural, not algorithmic, cues.",
-    process: [
-      {
-        title: "Archive audit",
-        description: "Grouped all entries by issue, theme, and medium to reduce overlap before building the interface."
-      },
-      {
-        title: "Metadata hierarchy",
-        description: "Prioritized date, issue number, and topic before excerpt length or thumbnail treatment."
-      },
-      {
-        title: "Filter economy",
-        description: "Designed filters to feel like notation rather than app chrome."
-      }
-    ]
   }
 ];
 

@@ -17,7 +17,7 @@ export default function WorksPage() {
             <p className="font-serif text-[3.6rem] font-normal leading-[0.94] tracking-editorial text-on-surface sm:text-[5rem] lg:text-[6rem]">
               Selected Works
             </p>
-            <p className="font-serif text-[3.2rem] italic leading-none text-white/18 sm:text-[4.5rem] lg:text-[5.4rem]">2023—2025</p>
+            <p className="font-serif text-[3.2rem] italic leading-none text-white/18 sm:text-[4.5rem] lg:text-[5.4rem]">2025-2026</p>
           </div>
           <p className="hidden self-center justify-self-end font-mono text-[10px] uppercase tracking-[0.35em] text-on-surface-variant lg:block [writing-mode:vertical-rl]">
             Architecture of Information
