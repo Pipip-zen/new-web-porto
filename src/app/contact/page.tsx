@@ -4,7 +4,7 @@ import { ContactPanel } from "@/components/sections/ContactPanel";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact Mika Vale for selected portfolio and digital design commissions."
+  description: "Contact Rafif Nuha for selected portfolio and digital design commissions."
 };
 
 export default function ContactPage() {

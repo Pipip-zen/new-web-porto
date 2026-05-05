@@ -78,8 +78,16 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 <p className="mt-2 text-sm normal-case tracking-normal text-on-surface">{project.client}</p>
               </div>
               <div>
+                <p>Role</p>
+                <p className="mt-2 text-sm normal-case tracking-normal text-on-surface">{project.role}</p>
+              </div>
+              <div>
                 <p>Location</p>
                 <p className="mt-2 text-sm normal-case tracking-normal text-on-surface">{project.location}</p>
+              </div>
+              <div>
+                <p>Year</p>
+                <p className="mt-2 text-sm normal-case tracking-normal text-on-surface">{project.year}</p>
               </div>
             </div>
             <Divider />

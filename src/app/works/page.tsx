@@ -5,7 +5,7 @@ import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
   title: "Works",
-  description: "Selected project work by Mika Vale."
+  description: "Selected project work by Rafif Nuha."
 };
 
 export default function WorksPage() {

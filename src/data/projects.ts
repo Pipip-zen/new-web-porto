@@ -80,40 +80,43 @@ export const projects: Project[] = [
     ]
   },
   {
-    slug: "axis-nine",
+    slug: "craftlab-simulation",
     displayIndex: "02",
-    title: "Void Framework",
-    year: "2024",
-    category: "System Design",
-    role: "Frontend Engineer",
-    client: "Axis / 09",
-    location: "Singapore",
-    image: "/projects/void-framework.svg",
-    summary: "A strict component library based on negative space and measured interaction.",
-    description: "An experimental UI library that treats empty space as structural material and interface rhythm as system logic.",
+    title: "Craftlab Simulation",
+    year: "2025",
+    category: "VR Experience",
+    role: "VR Simulation Developer",
+    client: "Final course project",
+    clientLabel: "Context",
+    demoUrl: "https://daniswara99.met.student.pens.ac.id/vr/index.html",
+    githubUrl: "https://github.com/arguspermono/VR_RAKIT-PC",
+    location: "Indonesia",
+    image: "/projects/craftlab-image.png",
+    summary: "A 3D VR simulation for computer assembly, designed to make hardware-learning more interactive and spatial.",
+    description: "A web-based VR simulation for assembling computer components in a 3D environment, built with Three.js and Babylon.js as a final course project.",
     featured: true,
-    services: ["Identity web translation", "Design system", "Frontend build"],
-    stack: ["Next.js", "TypeScript", "MD-driven content"],
+    services: ["VR games", "Three.js", "Babylon.js"],
+    stack: ["React JS", "Three.js", "Babylon.js", "WebXR"],
     metrics: [
-      { label: "Projects indexed", value: "21" },
-      { label: "Responsive breakpoints", value: "04" },
-      { label: "Motion states", value: "Subtle only" }
+      { label: "Platform", value: "Web VR" },
+      { label: "Libraries", value: "3D focused" },
+      { label: "Build year", value: "2025" }
     ],
-    challenge: "Preserve the studio's austere print identity while making browsing intuitive on mobile.",
-    solution: "Used fixed structural navigation, compact technical labels, and a bottom nav pattern that mirrors plan annotations.",
-    outcome: "The portfolio now reads as a coherent archive across desktop, tablet, and mobile without compromising its severe tone.",
+    challenge: "Create a browser-based VR simulation that helps users understand computer assembly through immersive 3D interaction without making the flow confusing.",
+    solution: "Built a structured simulation using Three.js and Babylon.js, with spatial object placement, guided interaction, and a web-delivered VR environment.",
+    outcome: "The project delivered an interactive prototype for learning computer assembly in VR and translated technical course work into a more engaging educational experience.",
     process: [
       {
-        title: "System before decoration",
-        description: "Defined spacing, linework, and label behavior before drawing any hero compositions."
+        title: "Simulation mapping",
+        description: "Mapped each assembly step so users could move through the computer-building process in a clear and logical order."
       },
       {
-        title: "Adaptive asymmetry",
-        description: "Collapsed split layouts into stacked mobile sequences while keeping the editorial rhythm intact."
+        title: "3D interaction design",
+        description: "Designed object interactions and placement behavior to make picking, positioning, and understanding components feel more intuitive."
       },
       {
-        title: "Controlled motion",
-        description: "Applied motion only to entrances and content swaps, never as flourish."
+        title: "Web VR delivery",
+        description: "Optimized the simulation for browser-based VR playback so it remained accessible without requiring a native installation."
       }
     ]
   },
