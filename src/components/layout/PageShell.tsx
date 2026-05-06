@@ -31,7 +31,7 @@ export function PageShell({ index, label, children }: PageShellProps) {
           </span>
         </div>
         <div className="flex-1 px-4 pb-16 pt-6 sm:px-6 lg:px-10 lg:pb-10 lg:pt-8 xl:px-14">{children}</div>
-        <div className="px-4 pb-24 sm:px-6 lg:px-10 lg:pb-8 xl:px-14">
+        <div className="px-4 pb-8 sm:px-6 lg:px-10 lg:pb-8 xl:px-14">
           <Footer />
         </div>
       </div>
