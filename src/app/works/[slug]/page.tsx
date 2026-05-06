@@ -49,7 +49,28 @@ export async function generateMetadata({ params }: ProjectDetailPageProps): Prom
 
   return {
     title: project.title,
-    description: project.summary
+    description: project.summary,
+    alternates: {
+      canonical: `/works/${project.slug}`
+    },
+    openGraph: {
+      title: `${project.title} - Rafif Nuha Portfolio`,
+      description: project.summary,
+      url: `/works/${project.slug}`,
+      type: "article",
+      images: [
+        {
+          url: project.image,
+          alt: project.title
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} - Rafif Nuha Portfolio`,
+      description: project.summary,
+      images: [project.image]
+    }
   };
 }
 

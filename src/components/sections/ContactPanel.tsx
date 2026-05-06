@@ -8,11 +8,11 @@ export function ContactPanel() {
       <p className="font-mono text-[10px] uppercase tracking-technical text-on-surface-variant">Initiate communication</p>
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
         <div className="space-y-8">
-          <p className="max-w-[8ch] font-serif text-[3.8rem] font-normal leading-[0.92] tracking-editorial text-on-surface sm:text-[5rem] lg:text-[7.4rem]">
+          <h1 className="max-w-[8ch] font-serif text-[3.8rem] font-normal leading-[0.92] tracking-editorial text-on-surface sm:text-[5rem] lg:text-[7.4rem]">
             RAFIF.<br />
             NUHA@<br />
             GMAIL.COM
-          </p>
+          </h1>
           <Divider />
           <div className="flex flex-wrap gap-4">
             <Button href="mailto:rafif.nuha@gmail.com" className="min-w-[10rem]">

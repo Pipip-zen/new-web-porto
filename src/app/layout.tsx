@@ -17,17 +17,58 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://monochrome-experimentalist.dev"),
+  metadataBase: new URL("https://rafifnuha.my.id"),
   title: {
-    default: "Portofolio Website — Rafif Nuha",
-    template: "%s — Rafif Nuha"
+    default: "Portfolio - Muhammad Rafif Nuha Daniswara",
+    template: "%s - Muhammad Rafif Nuha Daniswara"
   },
-  description: "A monochrome, editorial portfolio for Rafif Nuha — frontend developer and spatial web designer.",
+  description: "Monochrome portfolio of Muhammad Rafif Nuha Daniswara, frontend developer and spatial web designer based in Surabaya.",
   keywords: ["portfolio", "frontend developer", "design", "next.js", "monochrome"],
+  applicationName: "Rafif Nuha Portfolio",
+  authors: [{ name: "Muhammad Rafif Nuha Daniswara" }],
+  creator: "Muhammad Rafif Nuha Daniswara",
+  publisher: "Muhammad Rafif Nuha Daniswara",
+  category: "portfolio",
+  alternates: {
+    canonical: "/"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1
+    }
+  },
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png"
+  },
   openGraph: {
-    title: "Rafif Nuha — Monochrome Experimentalist",
-    description: "Monochrome editorial portfolio built with Next.js.",
-    type: "website"
+    title: "Muhammad Rafif Nuha Daniswara - Portfolio",
+    description: "Monochrome editorial portfolio for frontend development, digital product design, and spatial web work.",
+    url: "/",
+    siteName: "Rafif Nuha Portfolio",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 512,
+        height: 512,
+        alt: "Rafif Nuha Portfolio logo"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary",
+    title: "Muhammad Rafif Nuha Daniswara - Portfolio",
+    description: "Monochrome editorial portfolio for frontend development, digital product design, and spatial web work.",
+    images: ["/logo.png"]
   }
 };
 

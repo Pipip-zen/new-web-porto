@@ -6,9 +6,9 @@ export function AboutIntro() {
       <div className="space-y-8">
         <p className="font-mono text-[10px] uppercase tracking-technical text-on-surface-variant">Vol. 01 / Profile</p>
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-end">
-          <h2 className="max-w-[11ch] font-serif text-[3.4rem] font-normal leading-[0.96] tracking-editorial text-on-surface sm:text-[4.8rem] lg:text-[6.4rem]">
+          <h1 className="max-w-[11ch] font-serif text-[3.4rem] font-normal leading-[0.96] tracking-editorial text-on-surface sm:text-[4.8rem] lg:text-[6.4rem]">
             The Human Behind the Code
-          </h2>
+          </h1>
           <p className="max-w-sm text-sm leading-7 text-on-surface-variant">
             A Multimedia Engineering student who builds things across web development, network infrastructure, and immersive
             media.
