@@ -1,19 +1,47 @@
+export type SkillLevel = "Confident" | "Familiar";
+
+export type SkillItem = {
+  name: string;
+  level: SkillLevel;
+};
+
 export type SkillGroup = {
   category: string;
-  items: string[];
+  items: SkillItem[];
 };
 
 export const skills: SkillGroup[] = [
   {
-    category: "Design Direction",
-    items: ["Editorial systems", "Art direction", "Interaction restraint", "Spatial composition"]
-  },
-  {
     category: "Frontend",
-    items: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
+    items: [
+      { name: "HTML / CSS", level: "Confident" },
+      { name: "Tailwind CSS", level: "Confident" },
+      { name: "React / Vue JS", level: "Familiar" },
+      { name: "Flutter", level: "Familiar" }
+    ]
   },
   {
-    category: "Product Thinking",
-    items: ["Rapid prototyping", "Narrative UX", "Design systems", "Content structure"]
+    category: "Backend",
+    items: [
+      { name: "PHP / Laravel", level: "Confident" },
+      { name: "Python", level: "Familiar" }
+    ]
+  },
+  {
+    category: "Creative & Vision",
+    items: [
+      { name: "Three.js & WebGL", level: "Confident" },
+      { name: "Babylon.js", level: "Confident" },
+      { name: "OpenCV", level: "Familiar" },
+      { name: "Figma", level: "Familiar" }
+    ]
+  },
+  {
+    category: "DevOps & Tools",
+    items: [
+      { name: "Git / GitHub", level: "Confident" },
+      { name: "AWS / Vercel", level: "Confident" },
+      { name: "Docker", level: "Familiar" }
+    ]
   }
 ];

@@ -18,11 +18,14 @@ export function ContactPanel() {
             <Button href="mailto:rafif.nuha@gmail.com" className="min-w-[10rem]">
               Contact Me
             </Button>
-            <Button href="/Rafif-Nuha-CV.pdf" className="min-w-[10rem] border-outline-variant hover:border-on-surface">
+            <Button
+              href="/cv/CV_Muhammad%20Rafif%20Nuha%20Daniswara.pdf"
+              openInNewTab
+              className="min-w-[10rem] border-outline-variant hover:border-on-surface"
+            >
               Download CV
             </Button>
           </div>
-          <div className="aspect-square max-w-[22rem] border border-outline-variant bg-surface-container-lowest" />
         </div>
         <div className="border border-outline-variant">
           <div className="border-b border-outline-variant px-5 py-4 font-mono text-[10px] uppercase tracking-technical text-on-surface-variant">
@@ -38,10 +41,6 @@ export function ContactPanel() {
                 {index < 2 ? <Divider /> : null}
               </div>
             ))}
-          </div>
-          <div className="px-5 py-8 font-mono text-[10px] uppercase tracking-technical text-white/20">
-            <p>System Status: online</p>
-            <p className="mt-2">Latency: &lt;12ms</p>
           </div>
         </div>
       </div>

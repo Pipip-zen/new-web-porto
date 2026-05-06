@@ -12,8 +12,7 @@ export function Sidebar() {
     <aside className="fixed left-0 top-0 hidden h-screen w-[15rem] flex-col justify-between border-r border-outline-variant bg-[#070707] px-8 py-8 lg:flex">
       <div className="space-y-16">
         <div className="space-y-5">
-          <div className="h-12 w-12 border border-outline-variant bg-surface-container-highest" />
-          <Link href="/" className="block font-serif text-[1.1rem] font-normal leading-[0.95] text-on-surface">
+          <Link href="/" className="block font-serif text-[2rem] font-normal leading-[0.88] tracking-[-0.04em] text-on-surface">
             {siteProfile.name.split(" ").map((part) => (
               <span key={part} className="block uppercase">
                 {part}

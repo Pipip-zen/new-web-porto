@@ -8,7 +8,7 @@ import { skills } from "@/data/skills";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Background, approach, and capabilities of Rafif Nuha."
+  description: "Profile, experience, and technical capabilities of Rafif Nuha."
 };
 
 export default function AboutPage() {
