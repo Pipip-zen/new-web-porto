@@ -127,6 +127,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
               alt={project.title}
               width={1600}
               height={1000}
+              sizes="100vw"
               className="h-auto w-full brightness-[0.95] contrast-[0.98] saturate-[0.94]"
               priority
             />

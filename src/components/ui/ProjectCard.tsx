@@ -40,6 +40,7 @@ export function ProjectCard({ project, index = 0, className }: ProjectCardProps)
                 alt={project.title}
                 width={1400}
                 height={980}
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="h-auto w-full brightness-[0.95] contrast-[0.98] saturate-[0.94] transition-transform duration-500 group-hover:scale-[1.01]"
               />
             </div>
