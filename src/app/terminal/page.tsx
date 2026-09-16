@@ -437,9 +437,8 @@ export default function TerminalPage() {
                           changeTheme(t.id);
                           setIsThemeMenuOpen(false);
                         }}
-                        className={`w-full flex items-center justify-between px-2 py-1 rounded text-left transition-colors hover:bg-white/10 ${
-                          t.id === activeTheme ? "bg-white/15 font-bold" : "opacity-80"
-                        }`}
+                        className={`w-full flex items-center justify-between px-2 py-1 rounded text-left transition-colors hover:bg-white/10 ${t.id === activeTheme ? "bg-white/15 font-bold" : "opacity-80"
+                          }`}
                       >
                         <span className="text-white text-xs">{t.name}</span>
                         {t.id === activeTheme && (
@@ -459,7 +458,7 @@ export default function TerminalPage() {
             className={`inline-flex items-center gap-1 border px-2.5 py-0.5 transition-colors rounded text-xs font-bold ${styles.themeButton}`}
           >
             <span>←</span>
-            <span>Exit to GUI</span>
+            <span>Exit</span>
           </Link>
         </div>
       </div>
