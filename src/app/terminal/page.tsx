@@ -392,7 +392,7 @@ export default function TerminalPage() {
       <div className={styles.scanlines} />
 
       {/* Single Unified Compact Top Header */}
-      <div className={`flex items-center justify-between border-b border-white/10 bg-black/40 px-3 py-1.5 z-30 font-mono text-xs shrink-0 ${styles.themeBorder}`}>
+      <div className={`flex items-center justify-between border-b border-white/10 bg-black/40 px-3 py-1.5 z-40 font-mono text-xs shrink-0 ${styles.themeBorder}`}>
         <div className="flex items-center gap-2">
           <div className="flex gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block" />
@@ -404,7 +404,7 @@ export default function TerminalPage() {
 
         <div className="flex items-center gap-2">
           {/* THEME SWITCHER DROPDOWN MENU */}
-          <div className="relative">
+          <div className="relative z-50">
             <button
               onClick={() => setIsThemeMenuOpen(!isThemeMenuOpen)}
               className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-xs font-bold transition-colors cursor-pointer ${styles.themeButton}`}
@@ -425,11 +425,11 @@ export default function TerminalPage() {
                 />
 
                 {/* Floating Dropdown Panel */}
-                <div className={`absolute right-0 top-full mt-1.5 w-56 rounded-md border shadow-2xl p-1 z-50 font-mono text-xs ${styles.themePanel} bg-black/95 backdrop-blur-md`}>
+                <div className={`absolute right-0 top-full mt-1.5 w-52 rounded-md border shadow-2xl p-1 z-50 font-mono text-xs ${styles.themePanel} bg-black/95 backdrop-blur-md`}>
                   <div className="px-2 py-1 border-b border-white/10 text-[10px] text-neutral-400 font-bold uppercase tracking-wider">
                     Select Terminal Theme
                   </div>
-                  <div className="py-1 space-y-0.5 max-h-64 overflow-y-auto">
+                  <div className="py-1 space-y-0.5 max-h-48 sm:max-h-56 overflow-y-auto">
                     {themeList.map((t) => (
                       <button
                         key={t.id}
@@ -437,7 +437,7 @@ export default function TerminalPage() {
                           changeTheme(t.id);
                           setIsThemeMenuOpen(false);
                         }}
-                        className={`w-full flex items-center justify-between px-2 py-1.5 rounded text-left transition-colors hover:bg-white/10 ${
+                        className={`w-full flex items-center justify-between px-2 py-1 rounded text-left transition-colors hover:bg-white/10 ${
                           t.id === activeTheme ? "bg-white/15 font-bold" : "opacity-80"
                         }`}
                       >
@@ -511,7 +511,7 @@ export default function TerminalPage() {
       </div>
 
       {/* Bottom Quick Action Buttons Bar */}
-      <div className="border-t border-white/10 bg-black/90 px-3 py-1.5 z-30 flex items-center justify-between gap-2 shrink-0 overflow-x-auto">
+      <div className="border-t border-white/10 bg-black/90 px-3 py-1.5 z-20 flex items-center justify-between gap-2 shrink-0 overflow-x-auto">
         <div className="flex items-center gap-1.5 text-xs">
           <span className="text-neutral-500 text-[10px] hidden sm:inline mr-1">QUICK CMDS:</span>
           {["help", "theme", "projects", "whoami", "skills", "contact", "clear"].map((cmd) => (
