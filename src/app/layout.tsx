@@ -1,78 +1,32 @@
 import type { Metadata, Viewport } from "next";
-import { JetBrains_Mono, Newsreader } from "next/font/google";
-import { MobileNav } from "@/components/layout/MobileNav";
-import { Sidebar } from "@/components/layout/Sidebar";
+import { JetBrains_Mono, Inter } from "next/font/google";
+import { TopHeader } from "@/components/layout/TopHeader";
+import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
-const newsreader = Newsreader({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-newsreader",
-  weight: ["400"]
+  variable: "--font-inter"
 });
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  weight: ["400"]
+  variable: "--font-jetbrains-mono"
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rafifnuha.my.id"),
   title: {
-    default: "Portfolio - Muhammad Rafif Nuha Daniswara",
-    template: "%s - Muhammad Rafif Nuha Daniswara"
+    default: "Rafif Nuha — Fullstack Developer",
+    template: "%s — Rafif Nuha"
   },
-  description: "Monochrome portfolio of Muhammad Rafif Nuha Daniswara, frontend developer and spatial web designer based in Surabaya.",
-  keywords: ["portfolio", "frontend developer", "design", "next.js", "monochrome"],
+  description: "Digital products and interfaces that feel intuitive, perform seamlessly, and leave a lasting impression.",
+  keywords: ["portfolio", "fullstack developer", "design", "next.js", "react", "monochrome"],
   applicationName: "Rafif Nuha Portfolio",
-  authors: [{ name: "Muhammad Rafif Nuha Daniswara" }],
-  creator: "Muhammad Rafif Nuha Daniswara",
-  publisher: "Muhammad Rafif Nuha Daniswara",
-  category: "portfolio",
-  alternates: {
-    canonical: "/"
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1
-    }
-  },
-  icons: {
-    icon: [
-      { url: "/icon.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon.png", sizes: "512x512", type: "image/png" }
-    ],
-    shortcut: "/icon.png",
-    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }]
-  },
-  openGraph: {
-    title: "Muhammad Rafif Nuha Daniswara - Portfolio",
-    description: "Monochrome editorial portfolio for frontend development, digital product design, and spatial web work.",
-    url: "/",
-    siteName: "Rafif Nuha Portfolio",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "/logo.png",
-        width: 512,
-        height: 512,
-        alt: "Rafif Nuha Portfolio logo"
-      }
-    ]
-  },
-  twitter: {
-    card: "summary",
-    title: "Muhammad Rafif Nuha Daniswara - Portfolio",
-    description: "Monochrome editorial portfolio for frontend development, digital product design, and spatial web work.",
-    images: ["/logo.png"]
-  }
+  authors: [{ name: "Rafif Nuha" }],
+  creator: "Rafif Nuha",
+  publisher: "Rafif Nuha",
+  category: "portfolio"
 };
 
 export const viewport: Viewport = {
@@ -87,13 +41,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${newsreader.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-surface text-on-surface">
-        <Sidebar />
-        <div className="min-h-screen lg:pl-[15rem]">
-          <main className="min-h-screen border-l border-outline-variant">{children}</main>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} bg-black text-white`}>
+      <body className="bg-black text-white antialiased font-mono min-h-screen flex flex-col justify-between">
+        <div>
+          <TopHeader />
+          <main className="mx-auto max-w-7xl px-6 lg:px-12">
+            {children}
+          </main>
         </div>
-        <MobileNav />
+        <Footer />
       </body>
     </html>
   );

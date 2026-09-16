@@ -1,40 +1,81 @@
-import { siteProfile } from "@/data/navigation";
-import { Button } from "@/components/ui/Button";
-import { Divider } from "@/components/ui/Divider";
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+
+const titles = [
+  "Fullstack Developer",
+  "UI/UX Designer",
+  "Mobile Developer",
+  "DevOps"
+];
 
 export function HeroSection() {
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const fullText = titles[currentTitleIndex];
+
+    const typingSpeed = isDeleting ? 45 : 85;
+    const pauseDelay = 2200;
+
+    let timer: NodeJS.Timeout;
+
+    if (!isDeleting && currentText === fullText) {
+      timer = setTimeout(() => setIsDeleting(true), pauseDelay);
+    } else if (isDeleting && currentText === "") {
+      setIsDeleting(false);
+      setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+    } else {
+      timer = setTimeout(() => {
+        setCurrentText((prev) =>
+          isDeleting
+            ? fullText.substring(0, prev.length - 1)
+            : fullText.substring(0, prev.length + 1)
+        );
+      }, typingSpeed);
+    }
+
+    return () => clearTimeout(timer);
+  }, [currentText, isDeleting, currentTitleIndex]);
+
   return (
-    <section className="border border-outline-variant">
-      <div className="grid min-h-[26rem] gap-10 border-b border-outline-variant px-5 py-8 sm:px-8 lg:min-h-[34rem] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-12 lg:px-12 lg:py-12">
-        <div className="space-y-8 lg:space-y-14">
-          <p className="font-mono text-[10px] uppercase tracking-technical text-on-surface-variant">[ Digital design & development ]</p>
-          <h1 className="max-w-[10ch] font-serif text-[3.6rem] font-normal italic leading-[0.96] tracking-editorial text-on-surface sm:text-[4.8rem] lg:text-[6.2rem] xl:text-[7.2rem]">
-            Turning Ideas into Digital Solutions
-          </h1>
+    <section className="pt-12 pb-16 lg:pt-16 lg:pb-24">
+      {/* Top Hero Section */}
+      <div className="space-y-6">
+        {/* Fixed Height Container to Prevent Layout Shift (Page Bouncing) */}
+        <div className="h-12 sm:h-16 md:h-[4.5rem] flex items-center justify-start">
+          <div className="inline-flex items-center justify-start bg-white text-black px-4 py-2 sm:px-6 sm:py-2.5 font-mono text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight whitespace-nowrap transition-all duration-300 ease-out">
+            <span>{currentText || "\u00A0"}</span>
+            <span className="animate-pulse ml-1 inline-block w-[3px] h-[0.75em] bg-black align-middle" />
+          </div>
         </div>
-        <div className="max-w-md self-end lg:justify-self-end">
-          <p className="text-sm leading-7 text-on-surface-variant sm:text-base sm:leading-8">
-            I&apos;m Muhammad Rafif Nuha Daniswara, creating digital products and interfaces that look refined, work beautifully, and help brands stand out online.
-          </p>
+
+        {/* Bio Description */}
+        <p className="max-w-md font-mono text-sm leading-relaxed text-neutral-300 sm:text-base">
+          I craft digital products and interfaces that feel intuitive, perform seamlessly, and leave a lasting impression.
+        </p>
+
+        {/* Link to Archive */}
+        <div className="pt-2">
+          <Link
+            href="/works"
+            className="group inline-flex items-center gap-2 border-b border-neutral-400 pb-1 font-mono text-sm tracking-wider text-white transition-opacity hover:opacity-80"
+          >
+            <span>View Archive</span>
+            <span className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+          </Link>
         </div>
       </div>
 
-      <div className="grid border-b border-outline-variant lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)]">
-        <div className="border-b border-outline-variant p-4 lg:border-b-0 lg:border-r lg:border-outline-variant lg:p-6">
-          <p className="font-mono text-[10px] uppercase tracking-technical text-on-surface-variant">Loc</p>
-          <p className="mt-4 text-sm leading-7 text-on-surface">{siteProfile.location}</p>
-        </div>
-        <div className="border-b border-outline-variant p-4 lg:border-b-0 lg:border-r lg:border-outline-variant lg:p-6">
-          <p className="font-mono text-[10px] uppercase tracking-technical text-on-surface-variant">Status</p>
-          <p className="mt-4 text-sm leading-7 text-on-surface">{siteProfile.availability}</p>
-        </div>
-        <div className="p-4 lg:flex lg:items-center lg:justify-end lg:p-6">
-          <div className="flex flex-wrap gap-4">
-            <Button href="/works">View archive</Button>
-          </div>
-        </div>
+      {/* Massive Right-Aligned Name Typography */}
+      <div className="mt-16 sm:mt-24 lg:mt-32 text-right">
+        <h1 className="font-sans text-[3.8rem] font-extrabold uppercase leading-none tracking-tight text-white sm:text-[6.5rem] md:text-[8.5rem] lg:text-[10.5rem] xl:text-[12rem] text-right">
+          RAFIF NUHA
+        </h1>
       </div>
-      <Divider />
     </section>
   );
 }
