@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigationItems } from "@/data/navigation";
@@ -12,16 +11,11 @@ export function TopHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#222222] bg-black/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-12">
-        {/* Logo Image */}
-        <Link href="/" className="group flex items-center gap-2">
-          <Image
-            src="/logo.png"
-            alt="Rafif Nuha Logo"
-            width={48}
-            height={48}
-            className="h-9 w-auto object-contain transition-opacity group-hover:opacity-80"
-            priority
-          />
+        {/* Monogram RN Logo */}
+        <Link href="/" className="group flex items-center">
+          <span className="font-serif text-3xl font-bold tracking-tighter text-white transition-opacity group-hover:opacity-80 sm:text-4xl">
+            RN
+          </span>
         </Link>
 
         {/* Navigation Links */}
