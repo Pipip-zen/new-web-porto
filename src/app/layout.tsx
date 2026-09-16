@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono, Inter } from "next/font/google";
 import { TopHeader } from "@/components/layout/TopHeader";
+import { MobileNav } from "@/components/layout/MobileNav";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
@@ -45,11 +46,12 @@ export default function RootLayout({
       <body className="bg-black text-white antialiased font-mono min-h-screen flex flex-col justify-between">
         <div>
           <TopHeader />
-          <main className="mx-auto max-w-7xl px-6 lg:px-12">
+          <main className="mx-auto max-w-7xl px-6 lg:px-12 pb-24 md:pb-0">
             {children}
           </main>
         </div>
         <Footer />
+        <MobileNav />
       </body>
     </html>
   );
