@@ -14,7 +14,7 @@ export default function WorksPage() {
   return (
     <div className="py-12 space-y-6">
       <div className="pb-6">
-        <h1 className="font-sans text-2xl font-medium tracking-tight text-white sm:text-4xl mb-2">
+        <h1 className="font-mono text-3xl sm:text-5xl font-bold tracking-tight text-white">
           Selected Works & Case Studies
         </h1>
       </div>

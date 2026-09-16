@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { PageShell } from "@/components/layout/PageShell";
 import { ContactPanel } from "@/components/sections/ContactPanel";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Contact Muhammad Rafif Nuha Daniswara for portfolio projects, frontend development, and digital design commissions.",
+  title: "Contact — Rafif Nuha",
+  description: "Contact Rafif Nuha for portfolio projects, frontend development, and digital design collaborations.",
   alternates: {
     canonical: "/contact"
   }
@@ -12,8 +11,8 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <PageShell index="04" label="Contact">
+    <div className="py-12">
       <ContactPanel />
-    </PageShell>
+    </div>
   );
 }
