@@ -384,6 +384,8 @@ export default function TerminalPage() {
     }
   };
 
+  const [isThemeMenuOpen, setIsThemeMenuOpen] = useState(false);
+
   return (
     <div className={`fixed inset-0 z-50 h-full w-full flex flex-col font-mono overflow-hidden select-none ${styles.crtScreen} ${currentThemeObj.cssClass}`}>
       {/* Scanlines overlay effect */}
@@ -401,15 +403,55 @@ export default function TerminalPage() {
         </div>
 
         <div className="flex items-center gap-2">
-          {/* THEME SWITCHER QUICK BUTTON */}
-          <button
-            onClick={cycleTheme}
-            className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-xs font-bold transition-colors ${styles.themeButton}`}
-            title="Click to cycle terminal themes"
-          >
-            <span>🎨</span>
-            <span>{currentThemeObj.name}</span>
-          </button>
+          {/* THEME SWITCHER DROPDOWN MENU */}
+          <div className="relative">
+            <button
+              onClick={() => setIsThemeMenuOpen(!isThemeMenuOpen)}
+              className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-xs font-bold transition-colors cursor-pointer ${styles.themeButton}`}
+              title="Select Terminal Theme"
+            >
+              <span>🎨</span>
+              <span className="hidden xs:inline">{currentThemeObj.name}</span>
+              <span className="xs:hidden">Theme</span>
+              <span className="text-[9px] ml-0.5 opacity-80">▼</span>
+            </button>
+
+            {isThemeMenuOpen && (
+              <>
+                {/* Backdrop overlay to close dropdown on click outside */}
+                <div
+                  className="fixed inset-0 z-40"
+                  onClick={() => setIsThemeMenuOpen(false)}
+                />
+
+                {/* Floating Dropdown Panel */}
+                <div className={`absolute right-0 top-full mt-1.5 w-56 rounded-md border shadow-2xl p-1 z-50 font-mono text-xs ${styles.themePanel} bg-black/95 backdrop-blur-md`}>
+                  <div className="px-2 py-1 border-b border-white/10 text-[10px] text-neutral-400 font-bold uppercase tracking-wider">
+                    Select Terminal Theme
+                  </div>
+                  <div className="py-1 space-y-0.5 max-h-64 overflow-y-auto">
+                    {themeList.map((t) => (
+                      <button
+                        key={t.id}
+                        onClick={() => {
+                          changeTheme(t.id);
+                          setIsThemeMenuOpen(false);
+                        }}
+                        className={`w-full flex items-center justify-between px-2 py-1.5 rounded text-left transition-colors hover:bg-white/10 ${
+                          t.id === activeTheme ? "bg-white/15 font-bold" : "opacity-80"
+                        }`}
+                      >
+                        <span className="text-white text-xs">{t.name}</span>
+                        {t.id === activeTheme && (
+                          <span className="text-emerald-400 font-bold text-xs">✓</span>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
 
           {/* SINGLE EXIT GUI BUTTON */}
           <Link
