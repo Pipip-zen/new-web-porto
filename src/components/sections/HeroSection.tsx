@@ -58,14 +58,22 @@ export function HeroSection() {
           I craft digital products and interfaces that feel intuitive, perform seamlessly, and leave a lasting impression.
         </p>
 
-        {/* Link to Archive */}
-        <div className="pt-2">
+        {/* Links: View Archive & Terminal Mode */}
+        <div className="pt-2 flex flex-wrap items-center gap-6">
           <Link
             href="/works"
             className="group inline-flex items-center gap-2 border-b border-neutral-400 pb-1 font-mono text-sm tracking-wider text-white transition-opacity hover:opacity-80"
           >
             <span>View Archive</span>
             <span className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+          </Link>
+
+          <Link
+            href="/terminal"
+            className="group inline-flex items-center gap-2 border border-emerald-500/60 bg-emerald-950/30 px-3.5 py-1.5 font-mono text-xs sm:text-sm tracking-wider text-emerald-400 hover:bg-emerald-500 hover:text-black transition-all duration-200 shadow-[0_0_15px_rgba(16,185,129,0.15)]"
+          >
+            <span className="text-emerald-500 group-hover:text-black font-bold">&gt;_</span>
+            <span>Terminal Mode</span>
           </Link>
         </div>
       </div>

@@ -8,6 +8,11 @@ import { cn } from "@/lib/utils";
 export function TopHeader() {
   const pathname = usePathname();
 
+  // Hide TopHeader completely when on /terminal page
+  if (pathname === "/terminal") {
+    return null;
+  }
+
   return (
     <header className="sticky top-0 z-40 w-full border-b border-[#222222] bg-black/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">

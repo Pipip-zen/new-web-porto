@@ -60,6 +60,11 @@ const getNavIcon = (index: string) => {
 export function MobileNav() {
   const pathname = usePathname();
 
+  // Hide MobileNav completely on /terminal route
+  if (pathname === "/terminal") {
+    return null;
+  }
+
   return (
     <nav
       className="fixed bottom-0 left-0 right-0 z-50 border-t border-neutral-800 bg-black/95 backdrop-blur-xl md:hidden"
