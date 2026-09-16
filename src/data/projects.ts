@@ -45,7 +45,7 @@ export const projects: Project[] = [
     clientLabel: "Context",
     demoUrl: "https://kashflow.my.id",
     githubUrl: "https://github.com/Pipip-zen/kasflow",
-    location: "Indonesia",
+    location: "Surabaya",
     image: "/projects/kashflow-image.png",
     summary: "A modern cash-collection web app for groups, with automated billing, live payment tracking, and a cleaner admin flow.",
     description: "Collective cash management application. Send automatic invoices via email. Monitor cash inflows in real time.",
@@ -90,7 +90,7 @@ export const projects: Project[] = [
     clientLabel: "Context",
     demoUrl: "https://daniswara99.met.student.pens.ac.id/vr/index.html",
     githubUrl: "https://github.com/arguspermono/VR_RAKIT-PC",
-    location: "Indonesia",
+    location: "Surabaya",
     image: "/projects/craftlab-image.png",
     summary: "A 3D VR simulation for computer assembly, designed to make hardware-learning more interactive and spatial.",
     description: "A web-based VR simulation for assembling computer components in a 3D environment, built with Three.js and Babylon.js as a final course project.",
@@ -121,8 +121,88 @@ export const projects: Project[] = [
     ]
   },
   {
-    slug: "invoice-generator",
+    slug: "clipmeet",
     displayIndex: "03",
+    title: "ClipMeet",
+    year: "2026",
+    category: "Web App",
+    role: "Fullstack Developer",
+    client: "Personal project",
+    clientLabel: "Context",
+    githubUrl: "https://github.com/Pipip-zen/clipmeet-demo",
+    location: "Surabaya",
+    image: "/projects/clipmeet-image.png",
+    summary: "Real-time video meeting, recording, and clipping web application powered by React, WebRTC, Socket.IO, and FFmpeg.",
+    description: "Web application for real-time video recording and clipping. Record live meetings and clip video highlights seamlessly.",
+    featured: true,
+    services: ["Web App", "Real-time Media", "Video Processing"],
+    stack: ["React (Vite)", "Node.js (Express)", "Socket.IO", "WebRTC", "FFmpeg"],
+    metrics: [
+      { label: "Live recording", value: "WebRTC" },
+      { label: "Video clipping", value: "FFmpeg" },
+      { label: "Build year", value: "2026" }
+    ],
+    challenge: "Build a browser-based video meeting tool capable of recording live streams and clipping video highlights on the server without quality degradation.",
+    solution: "Developed a React frontend connected via Socket.IO and WebRTC with a Node.js backend utilizing FFmpeg to process and slice webm recording clips on demand.",
+    outcome: "Delivered an interactive web app that lets participants join live meetings, record session video, and generate highlight clips instantly.",
+    process: [
+      {
+        title: "Real-time communication",
+        description: "Established WebRTC and Socket.IO video streaming between meeting participants."
+      },
+      {
+        title: "Stream recording",
+        description: "Implemented MediaRecorder API on client to capture live stream video blobs."
+      },
+      {
+        title: "FFmpeg clipping pipeline",
+        description: "Integrated server-side FFmpeg processing for automated highlight clip extraction."
+      }
+    ]
+  },
+  {
+    slug: "catetin",
+    displayIndex: "04",
+    title: "Catetin",
+    year: "2026",
+    category: "Mobile App",
+    role: "Mobile App Developer",
+    client: "Personal project",
+    clientLabel: "Context",
+    githubUrl: "https://github.com/Pipip-zen/money-tracker-flutter",
+    location: "Surabaya",
+    image: "/projects/catetin-image.png",
+    summary: "Mobile expense and routine transaction tracking app built with Flutter for intuitive personal finance management.",
+    description: "Personal finance and routine transaction tracking mobile application. Record income, expenses, and manage budgets effortlessly.",
+    featured: true,
+    services: ["Mobile App", "Flutter Development", "UI UX Design"],
+    stack: ["Flutter", "Dart", "Provider", "SQLite"],
+    metrics: [
+      { label: "Platform", value: "Mobile (Flutter)" },
+      { label: "Transactions", value: "Tracked" },
+      { label: "Build year", value: "2026" }
+    ],
+    challenge: "Design a clean mobile financial tracker that simplifies logging recurring transactions and expenses without complicated navigation.",
+    solution: "Built a cross-platform mobile app using Flutter with clean form inputs, category tags, recurring transaction scheduling, and clear expense summaries.",
+    outcome: "Created a sleek mobile finance companion that allows users to record daily income and expenses in seconds.",
+    process: [
+      {
+        title: "UI & Form design",
+        description: "Designed an accessible mobile form layout for quick transaction entry and categorization."
+      },
+      {
+        title: "Recurring scheduler",
+        description: "Implemented automated logic for daily, weekly, and monthly routine transaction tracking."
+      },
+      {
+        title: "Local storage persistence",
+        description: "Used local device storage to ensure fast, offline-first data management."
+      }
+    ]
+  },
+  {
+    slug: "invoice-generator",
+    displayIndex: "05",
     title: "Invoice Generator",
     year: "2025",
     category: "Web App",
@@ -131,7 +211,7 @@ export const projects: Project[] = [
     clientLabel: "Context",
     demoUrl: "https://invoice-generator-khaki-nu.vercel.app/",
     githubUrl: "https://github.com/Pipip-zen/invoice-generator",
-    location: "Indonesia",
+    location: "Surabaya",
     image: "/projects/invoice-images.png",
     summary: "A streamlined invoice dashboard for creating bills, monitoring payments, and understanding revenue performance faster.",
     description: "Manage invoices, track payments, and visualize your revenue — all in one clean dashboard.",
